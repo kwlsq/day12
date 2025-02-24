@@ -1,30 +1,30 @@
 console.log('hello');
 import Circle from "./interface/circle.js";
 
-function triangleArea(length: number, width: number): number {
+export function triangleArea(length: number, width: number): number {
     return length * width;
 }
 
-function circleFormulas(radius: number): Circle {
+export function circleFormulas(radius: number): Circle {
     const phi = Math.PI;
 
     return {
-        area: phi * ((2 * radius) ** 2),
+        area: phi * ((radius) ** 2),
         circumference: 2 * phi * radius,
         diameter: radius * 2,
     }
 }
 
-function findAngle(angleA: number, angleB: number): number {
+export function findAngle(angleA: number, angleB: number): number {
     return 180 - (angleA + angleB);
 }
 
-function dateDiffInDays(date1: Date, date2: Date): number {
+export function dateDiffInDays(date1: Date, date2: Date): number {
     const diffInMs = Math.abs(date2.getTime() - date1.getTime());
     return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
-function initialUppercase(name: string): string {
+export function initialUppercase(name: string): string {
     const arrName = name.trim().split(" ");
     let result = "";
 
